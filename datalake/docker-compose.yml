@@ -1,0 +1,52 @@
+
+services:
+  mongo1:
+    image: mongo:4.4
+    container_name: mongo1
+    command: ["--replSet", "rs0", "--bind_ip_all", "--port", "27017"]
+    ports:
+      - "27017:27017" 
+    volumes:
+      - ./data/mongo1:/data/db
+      - ./config/mongo1:/data/configdb
+    networks:
+      - mongo_replica_rtr
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 30s
+      retries: 30
+
+  mongo2:
+    image: mongo:4.4
+    container_name: mongo2
+    command: ["--replSet", "rs0", "--bind_ip_all", "--port", "27018"]
+    ports:
+      - "27018:27018" 
+    volumes:
+      - ./data/mongo2:/data/db
+      - ./config/mongo2:/data/configdb
+    networks:
+      - mongo_replica_rtr
+
+  mongo3:
+    image: mongo:4.4
+    container_name: mongo3
+    command: ["--replSet", "rs0", "--bind_ip_all", "--port", "27019"]
+    ports:
+      - "27019:27019" 
+    volumes:
+      - ./data/mongo3:/data/db
+      - ./config/mongo3:/data/configdb
+    networks:
+      - mongo_replica_rtr
+
+volumes:
+  mongo1:
+  mongo2:
+  mongo3:
+
+networks:
+  mongo_replica_rtr:
+    name: mongo_replica_rtr
+    external: true

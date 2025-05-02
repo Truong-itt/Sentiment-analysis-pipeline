@@ -1,0 +1,17 @@
+services:
+  rotoro_sentiment:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rotoro_sentiment
+    restart: always
+    ports:
+      - "8020:8020"
+    volumes:
+      - ./:/rotoro_sentiment
+    networks:
+      - mongo_replica_rtr
+networks:
+  mongo_replica_rtr:
+    name: mongo_replica_rtr
+    external: true

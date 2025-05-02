@@ -1,0 +1,189 @@
+services:
+  etcd1:
+    build: ./etcd
+    container_name: etcd1
+    environment:
+      - ETCD_NAME=etcd1
+      - ETCD_INITIAL_CLUSTER=etcd1=http://etcd1:2380,etcd2=http://etcd2:2380,etcd3=http://etcd3:2380
+      - ETCD_INITIAL_CLUSTER_STATE=new
+      - ETCD_INITIAL_CLUSTER_TOKEN=etcd-cluster
+      - ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd1:2379
+      - ETCD_LISTEN_PEER_URLS=http://0.0.0.0:2380
+      - ETCD_INITIAL_ADVERTISE_PEER_URLS=http://etcd1:2380
+    networks:
+      - postgres-ha
+    ports:
+      - "2379:2379"
+      - "2380:2380"
+    healthcheck:
+      test: ["CMD", "etcdctl", "endpoint", "health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  etcd2:
+    build: ./etcd
+    container_name: etcd2
+    environment:
+      - ETCD_NAME=etcd2
+      - ETCD_INITIAL_CLUSTER=etcd1=http://etcd1:2380,etcd2=http://etcd2:2380,etcd3=http://etcd3:2380
+      - ETCD_INITIAL_CLUSTER_STATE=new
+      - ETCD_INITIAL_CLUSTER_TOKEN=etcd-cluster
+      - ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd2:2379
+      - ETCD_LISTEN_PEER_URLS=http://0.0.0.0:2380
+      - ETCD_INITIAL_ADVERTISE_PEER_URLS=http://etcd2:2380
+    networks:
+      - postgres-ha
+    ports:
+      - "2381:2379"
+      - "2382:2380"
+    healthcheck:
+      test: ["CMD", "etcdctl", "endpoint", "health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  etcd3:
+    build: ./etcd
+    container_name: etcd3
+    environment:
+      - ETCD_NAME=etcd3
+      - ETCD_INITIAL_CLUSTER=etcd1=http://etcd1:2380,etcd2=http://etcd2:2380,etcd3=http://etcd3:2380
+      - ETCD_INITIAL_CLUSTER_STATE=new
+      - ETCD_INITIAL_CLUSTER_TOKEN=etcd-cluster
+      - ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd3:2379
+      - ETCD_LISTEN_PEER_URLS=http://0.0.0.0:2380
+      - ETCD_INITIAL_ADVERTISE_PEER_URLS=http://etcd3:2380
+    networks:
+      - postgres-ha
+    ports:
+      - "2383:2379"
+      - "2384:2380"
+    healthcheck:
+      test: ["CMD", "etcdctl", "endpoint", "health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  pg_node1:
+    build: ./patroni
+    container_name: pg_node1
+    environment:
+      - PATRONI_NAME=pg_node1
+      - PATRONI_POSTGRESQL_CONNECT_ADDRESS=pg_node1:5432
+      - PATRONI_RESTAPI_CONNECT_ADDRESS=pg_node1:8008
+    volumes:
+      - patroni_data_node1:/var/lib/postgresql/data
+      - ./patroni/patroni_node1/patroni.yml:/etc/patroni.yml
+    networks:
+      - postgres-ha
+    ports:
+      - "5432:5432"
+      - "8008:8008"
+    depends_on:
+      etcd1:
+        condition: service_healthy
+      etcd2:
+        condition: service_healthy
+      etcd3:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8008/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+  pg_node2:
+    build: ./patroni
+    container_name: pg_node2
+    environment:
+      - PATRONI_NAME=pg_node2
+      - PATRONI_POSTGRESQL_CONNECT_ADDRESS=pg_node2:5432
+      - PATRONI_RESTAPI_CONNECT_ADDRESS=pg_node2:8008
+    volumes:
+      - patroni_data_node2:/var/lib/postgresql/data
+      - ./patroni/patroni_node2/patroni.yml:/etc/patroni.yml
+    networks:
+      - postgres-ha
+    ports:
+      - "5433:5432"
+      - "8009:8008"
+    depends_on:
+      etcd1:
+        condition: service_healthy
+      etcd2:
+        condition: service_healthy
+      etcd3:
+        condition: service_healthy
+      pg_node1: 
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8008/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+  pg_node3:
+    build: ./patroni
+    container_name: pg_node3
+    environment:
+      - PATRONI_NAME=pg_node3
+      - PATRONI_POSTGRESQL_CONNECT_ADDRESS=pg_node3:5432
+      - PATRONI_RESTAPI_CONNECT_ADDRESS=pg_node3:8008
+    volumes:
+      - patroni_data_node3:/var/lib/postgresql/data
+      - ./patroni/patroni_node3/patroni.yml:/etc/patroni.yml
+    networks:
+      - postgres-ha
+    ports:
+      - "5434:5432"
+      - "8010:8008"
+    depends_on:
+      etcd1:
+        condition: service_healthy
+      etcd2:
+        condition: service_healthy
+      etcd3:
+        condition: service_healthy
+      pg_node1: 
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8008/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+
+  haproxy:
+    build: ./haproxy
+    container_name: haproxy
+    networks:
+      - postgres-ha
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+      - "7000:7000"
+    depends_on:
+      pg_node1:
+        condition: service_healthy
+      pg_node2:
+        condition: service_healthy
+      pg_node3:
+        condition: service_healthy
+    command: >
+      bash -c "sleep 15 && haproxy -f /usr/local/etc/haproxy/haproxy.cfg"
+
+volumes:
+  patroni_data_node1:
+  patroni_data_node2:
+  patroni_data_node3:
+
+networks:
+  postgres-ha:
+    name: postgres-ha
+    external: true

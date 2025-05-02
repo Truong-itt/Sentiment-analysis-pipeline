@@ -1,0 +1,32 @@
+services:
+  mongo-gui:
+    container_name: mongo-gui
+    image: mongo-express
+    restart: always
+    ports:
+      - 8091:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: rotoro
+      ME_CONFIG_MONGODB_ADMINPASSWORD: rotoro123
+      ME_CONFIG_MONGODB_URL: mongodb://rotoro:rotoro123@mongo1:27017,mongo2:27018,mongo3:27019/?replicaSet=rs0&authSource=admin
+      ME_CONFIG_BASICAUTH: false
+    networks:
+      - mongo_replica_rtr
+      
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: always
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./portainer-data:/data
+    ports:
+      - 9005:9000  
+    
+networks:
+  mongo_replica_rtr:
+    name: mongo_replica_rtr
+    external: true

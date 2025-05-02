@@ -1,0 +1,15 @@
+.venv
+venv
+# .env
+__pycache__
+db.sqlite3
+migrations/
+*.pyc
+data_mori/
+mori/mori/db_mori/data/
+.env
+*/.env
+*/*/.env
+datalake/config/*
+datalake/data/*
+sentiment_api/sentiment_model/*

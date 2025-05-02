@@ -1,0 +1,24 @@
+services:
+  process:
+    build: .
+    container_name: process
+    ports:
+      - 9001:9001
+    volumes:
+      - ./process:/process
+      - ./log:/var/log/supervisor/
+      - ./supervisord.conf:/etc/supervisor/conf.d/supervisord.conf
+    networks:
+      - postgres-ha
+      - mongo_replica_rtr
+networks:
+  postgres-ha:
+    name: postgres-ha
+    external: true
+
+  mongo_replica_rtr:
+    name: mongo_replica_rtr
+    external: true
+
+
+  

@@ -1,0 +1,34 @@
+services:
+  airflow-db:
+    image: postgres:13
+    container_name: airflow-db
+    env_file:
+      - .env
+    ports:
+      - 5439:5432
+    networks:
+      - mongo_replica_rtr
+      
+  data-update:
+    container_name: data-update
+    build: .
+    env_file:
+      - .env
+    user: "${AIRFLOW_UID:-50000}:0"
+    volumes:
+      - ./log:/var/log/rotoro_schedule
+      - ./dags:/opt/airflow/dags
+    ports:
+      - 8090:8080
+    command: bash -c '(${AIRFLOW_DB_INIT_COMMAND} && ${AIRFLOW_USER_CREATE_COMMAND}); ${AIRFLOW_COMMAND}'
+    networks:
+      - mongo_replica_rtr
+
+volumes:
+  dags:
+  data_local:
+
+networks:
+  mongo_replica_rtr:
+    name: mongo_replica_rtr
+    external: true

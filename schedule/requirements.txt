@@ -1,0 +1,9 @@
+apache-airflow==2.10.4
+confluent-kafka==2.7.0
+psycopg2-binary==2.9.10
+confluent-kafka
+pytz
+requests
+bs4
+feedparser
+pymongo

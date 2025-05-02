@@ -1,0 +1,9 @@
+requests
+pandas
+pymongo
+psycopg2-binary
+python-dotenv
+pytz
+pydantic
+# kafka-python==2.0.2
+# confluent-kafka

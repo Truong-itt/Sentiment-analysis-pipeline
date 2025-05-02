@@ -1,0 +1,190 @@
+2025-05-02 04:57:06,292 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-02 04:57:06,300 INFO RPC interface 'supervisor' initialized
+2025-05-02 04:57:06,300 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2025-05-02 04:57:06,302 INFO RPC interface 'supervisor' initialized
+2025-05-02 04:57:06,302 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-05-02 04:57:06,302 INFO supervisord started with pid 1
+2025-05-02 04:57:07,305 INFO spawned: 'initializeDB' with pid 9
+2025-05-02 04:57:07,307 INFO spawned: 'kinhdoanh' with pid 10
+2025-05-02 04:57:07,308 INFO spawned: 'giaitri' with pid 11
+2025-05-02 04:57:07,310 INFO spawned: 'tintucmoi' with pid 12
+2025-05-02 04:57:08,271 INFO exited: initializeDB (exit status 0; not expected)
+2025-05-02 04:57:09,275 INFO spawned: 'initializeDB' with pid 100
+2025-05-02 04:57:09,275 INFO success: kinhdoanh entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 04:57:09,275 INFO success: giaitri entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 04:57:09,275 INFO success: tintucmoi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 04:57:10,088 INFO exited: initializeDB (exit status 0; not expected)
+2025-05-02 04:57:12,231 INFO spawned: 'initializeDB' with pid 116
+2025-05-02 04:57:13,090 INFO exited: initializeDB (exit status 0; not expected)
+2025-05-02 04:57:16,581 INFO spawned: 'initializeDB' with pid 132
+2025-05-02 04:57:17,393 INFO exited: initializeDB (exit status 0; not expected)
+2025-05-02 04:57:17,394 INFO gave up: initializeDB entered FATAL state, too many start retries too quickly
+2025-05-02 05:02:18,111 WARN received SIGTERM indicating exit request
+2025-05-02 05:02:18,111 INFO waiting for kinhdoanh, giaitri, tintucmoi to die
+2025-05-02 05:02:19,120 INFO stopped: tintucmoi (terminated by SIGTERM)
+2025-05-02 05:02:19,128 INFO stopped: giaitri (terminated by SIGTERM)
+2025-05-02 05:02:19,136 INFO stopped: kinhdoanh (terminated by SIGTERM)
+2025-05-02 05:02:19,783 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-02 05:02:19,791 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:02:19,792 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2025-05-02 05:02:19,795 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:02:19,795 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-05-02 05:02:19,795 INFO supervisord started with pid 1
+2025-05-02 05:02:20,799 INFO spawned: 'initializeDB' with pid 9
+2025-05-02 05:02:20,801 INFO spawned: 'kinhdoanh' with pid 10
+2025-05-02 05:02:20,802 INFO spawned: 'giaitri' with pid 11
+2025-05-02 05:02:20,804 INFO spawned: 'tintucmoi' with pid 12
+2025-05-02 05:02:21,939 INFO success: initializeDB entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:02:21,939 INFO success: kinhdoanh entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:02:21,939 INFO success: giaitri entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:02:21,939 INFO success: tintucmoi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:02:21,939 INFO exited: initializeDB (exit status 0; expected)
+2025-05-02 05:06:53,711 WARN received SIGTERM indicating exit request
+2025-05-02 05:06:53,712 INFO waiting for kinhdoanh, giaitri, tintucmoi to die
+2025-05-02 05:06:54,721 INFO stopped: tintucmoi (terminated by SIGTERM)
+2025-05-02 05:06:55,730 INFO stopped: giaitri (terminated by SIGTERM)
+2025-05-02 05:06:56,740 INFO stopped: kinhdoanh (terminated by SIGTERM)
+2025-05-02 05:06:57,353 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-02 05:06:57,363 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:06:57,363 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2025-05-02 05:06:57,365 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:06:57,366 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-05-02 05:06:57,366 INFO supervisord started with pid 1
+2025-05-02 05:06:58,370 INFO spawned: 'initializeDB' with pid 9
+2025-05-02 05:06:58,371 INFO spawned: 'kinhdoanh' with pid 10
+2025-05-02 05:06:58,372 INFO spawned: 'giaitri' with pid 11
+2025-05-02 05:06:58,374 INFO spawned: 'tintucmoi' with pid 12
+2025-05-02 05:06:59,370 INFO success: initializeDB entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:06:59,370 INFO success: kinhdoanh entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:06:59,371 INFO exited: initializeDB (exit status 0; expected)
+2025-05-02 05:07:00,372 INFO success: giaitri entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:07:00,372 INFO success: tintucmoi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:08:31,028 WARN received SIGTERM indicating exit request
+2025-05-02 05:08:31,029 INFO waiting for kinhdoanh, giaitri, tintucmoi to die
+2025-05-02 05:08:31,037 INFO stopped: tintucmoi (terminated by SIGTERM)
+2025-05-02 05:08:32,047 INFO stopped: giaitri (terminated by SIGTERM)
+2025-05-02 05:08:32,055 INFO stopped: kinhdoanh (terminated by SIGTERM)
+2025-05-02 05:08:32,606 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-02 05:08:32,616 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:08:32,616 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2025-05-02 05:08:32,618 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:08:32,618 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-05-02 05:08:32,619 INFO supervisord started with pid 1
+2025-05-02 05:08:33,622 INFO spawned: 'initializeDB' with pid 9
+2025-05-02 05:08:33,624 INFO spawned: 'kinhdoanh' with pid 10
+2025-05-02 05:08:33,625 INFO spawned: 'giaitri' with pid 11
+2025-05-02 05:08:33,627 INFO spawned: 'tintucmoi' with pid 12
+2025-05-02 05:08:34,658 INFO success: initializeDB entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:08:34,659 INFO success: kinhdoanh entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:08:34,659 INFO success: giaitri entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:08:34,659 INFO success: tintucmoi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:08:34,659 INFO exited: initializeDB (exit status 0; expected)
+2025-05-02 05:12:06,484 WARN received SIGTERM indicating exit request
+2025-05-02 05:12:06,484 INFO waiting for kinhdoanh, giaitri, tintucmoi to die
+2025-05-02 05:12:06,493 INFO stopped: tintucmoi (terminated by SIGTERM)
+2025-05-02 05:12:07,504 INFO stopped: giaitri (terminated by SIGTERM)
+2025-05-02 05:12:08,514 INFO stopped: kinhdoanh (terminated by SIGTERM)
+2025-05-02 05:12:09,056 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-02 05:12:09,063 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:12:09,064 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2025-05-02 05:12:09,066 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:12:09,066 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-05-02 05:12:09,067 INFO supervisord started with pid 1
+2025-05-02 05:12:10,069 INFO spawned: 'initializeDB' with pid 9
+2025-05-02 05:12:10,071 INFO spawned: 'kinhdoanh' with pid 10
+2025-05-02 05:12:10,072 INFO spawned: 'giaitri' with pid 11
+2025-05-02 05:12:10,074 INFO spawned: 'tintucmoi' with pid 12
+2025-05-02 05:12:11,022 INFO exited: initializeDB (exit status 0; not expected)
+2025-05-02 05:12:12,025 INFO spawned: 'initializeDB' with pid 100
+2025-05-02 05:12:12,026 INFO success: kinhdoanh entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:12:12,026 INFO success: giaitri entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:12:12,026 INFO success: tintucmoi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:12:12,802 INFO exited: initializeDB (exit status 0; not expected)
+2025-05-02 05:12:14,970 INFO spawned: 'initializeDB' with pid 116
+2025-05-02 05:12:15,719 INFO exited: initializeDB (exit status 0; not expected)
+2025-05-02 05:12:18,726 INFO spawned: 'initializeDB' with pid 132
+2025-05-02 05:12:19,483 INFO exited: initializeDB (exit status 0; not expected)
+2025-05-02 05:12:20,485 INFO gave up: initializeDB entered FATAL state, too many start retries too quickly
+2025-05-02 05:14:59,596 WARN received SIGTERM indicating exit request
+2025-05-02 05:14:59,597 INFO waiting for kinhdoanh, giaitri, tintucmoi to die
+2025-05-02 05:15:00,608 INFO stopped: tintucmoi (terminated by SIGTERM)
+2025-05-02 05:15:00,616 INFO stopped: giaitri (terminated by SIGTERM)
+2025-05-02 05:15:01,627 INFO stopped: kinhdoanh (terminated by SIGTERM)
+2025-05-02 05:15:02,200 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-02 05:15:02,208 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:15:02,208 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2025-05-02 05:15:02,210 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:15:02,210 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-05-02 05:15:02,211 INFO supervisord started with pid 1
+2025-05-02 05:15:03,213 INFO spawned: 'initializeDB' with pid 9
+2025-05-02 05:15:03,215 INFO spawned: 'kinhdoanh' with pid 10
+2025-05-02 05:15:03,217 INFO spawned: 'giaitri' with pid 11
+2025-05-02 05:15:03,218 INFO spawned: 'tintucmoi' with pid 12
+2025-05-02 05:15:04,310 INFO success: initializeDB entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:15:04,310 INFO success: kinhdoanh entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:15:04,310 INFO success: giaitri entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:15:04,311 INFO success: tintucmoi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:15:04,311 INFO exited: initializeDB (exit status 0; expected)
+2025-05-02 05:20:31,300 WARN received SIGTERM indicating exit request
+2025-05-02 05:20:31,305 INFO waiting for kinhdoanh, giaitri, tintucmoi to die
+2025-05-02 05:20:32,316 INFO stopped: tintucmoi (terminated by SIGTERM)
+2025-05-02 05:20:32,324 INFO stopped: giaitri (terminated by SIGTERM)
+2025-05-02 05:20:33,334 INFO stopped: kinhdoanh (terminated by SIGTERM)
+2025-05-02 05:20:33,946 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-02 05:20:33,959 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:20:33,959 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2025-05-02 05:20:33,961 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:20:33,961 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-05-02 05:20:33,962 INFO supervisord started with pid 1
+2025-05-02 05:20:34,965 INFO spawned: 'initializeDB' with pid 9
+2025-05-02 05:20:34,966 INFO spawned: 'kinhdoanh' with pid 10
+2025-05-02 05:20:34,968 INFO spawned: 'giaitri' with pid 11
+2025-05-02 05:20:34,969 INFO spawned: 'tintucmoi' with pid 12
+2025-05-02 05:20:36,003 INFO success: initializeDB entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:20:36,003 INFO success: kinhdoanh entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:20:36,003 INFO success: giaitri entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:20:36,003 INFO success: tintucmoi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:20:36,003 INFO exited: initializeDB (exit status 0; expected)
+2025-05-02 05:24:47,725 WARN received SIGTERM indicating exit request
+2025-05-02 05:24:47,725 INFO waiting for kinhdoanh, giaitri, tintucmoi to die
+2025-05-02 05:24:48,733 INFO stopped: tintucmoi (terminated by SIGTERM)
+2025-05-02 05:24:48,741 INFO stopped: giaitri (terminated by SIGTERM)
+2025-05-02 05:24:49,750 INFO stopped: kinhdoanh (terminated by SIGTERM)
+2025-05-02 05:24:50,328 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-02 05:24:50,337 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:24:50,337 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2025-05-02 05:24:50,341 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:24:50,341 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-05-02 05:24:50,341 INFO supervisord started with pid 1
+2025-05-02 05:24:51,345 INFO spawned: 'initializeDB' with pid 9
+2025-05-02 05:24:51,347 INFO spawned: 'kinhdoanh' with pid 10
+2025-05-02 05:24:51,348 INFO spawned: 'giaitri' with pid 11
+2025-05-02 05:24:51,350 INFO spawned: 'tintucmoi' with pid 12
+2025-05-02 05:24:52,384 INFO success: initializeDB entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:24:52,384 INFO success: kinhdoanh entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:24:52,384 INFO success: giaitri entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:24:52,384 INFO success: tintucmoi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:24:52,384 INFO exited: initializeDB (exit status 0; expected)
+2025-05-02 05:26:48,788 WARN received SIGTERM indicating exit request
+2025-05-02 05:26:48,789 INFO waiting for kinhdoanh, giaitri, tintucmoi to die
+2025-05-02 05:26:49,800 INFO stopped: tintucmoi (terminated by SIGTERM)
+2025-05-02 05:26:50,810 INFO stopped: giaitri (terminated by SIGTERM)
+2025-05-02 05:26:51,821 INFO stopped: kinhdoanh (terminated by SIGTERM)
+2025-05-02 05:26:52,401 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2025-05-02 05:26:52,411 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:26:52,412 CRIT Server 'inet_http_server' running without any HTTP authentication checking
+2025-05-02 05:26:52,414 INFO RPC interface 'supervisor' initialized
+2025-05-02 05:26:52,414 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2025-05-02 05:26:52,415 INFO supervisord started with pid 1
+2025-05-02 05:26:53,417 INFO spawned: 'initializeDB' with pid 9
+2025-05-02 05:26:53,419 INFO spawned: 'kinhdoanh' with pid 10
+2025-05-02 05:26:53,420 INFO spawned: 'giaitri' with pid 11
+2025-05-02 05:26:53,422 INFO spawned: 'tintucmoi' with pid 12
+2025-05-02 05:26:54,446 INFO success: initializeDB entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:26:54,446 INFO success: kinhdoanh entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:26:54,446 INFO success: giaitri entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:26:54,446 INFO success: tintucmoi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-05-02 05:26:54,446 INFO exited: initializeDB (exit status 0; expected)
+2025-05-02 07:10:37,280 INFO exited: giaitri (exit status 1; not expected)
+2025-05-02 07:10:38,283 INFO spawned: 'giaitri' with pid 109
+2025-05-02 07:10:39,285 INFO success: giaitri entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
