@@ -2,6 +2,8 @@
 
 This project implements a high-availability data pipeline for crawling data, performing sentiment analysis using a local Vietnamese model, and streaming processed data to MongoDB and PostgreSQL. The entire system is containerized using Docker, with Airflow for orchestration, MongoDB Replica Set for high availability, and PostgreSQL HA using Patroni, etcd, and HAProxy.
 
+![0fa1b1e3c5d3778d2ec2](https://github.com/user-attachments/assets/d423f8cd-181d-4e41-8a66-7d6a2c730830)
+
 ## Table of Contents
 - [Overview](#overview)
 - [Architecture](#architecture)
