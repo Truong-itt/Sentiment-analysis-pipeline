@@ -7,12 +7,8 @@ This project implements a high-availability data pipeline for crawling data, per
 - [Architecture](#architecture)
 - [Prerequisites](#prerequisites)
 - [Setup Instructions](#setup-instructions)
-- [Directory Structure](#directory-structure)
 - [Running the Pipeline](#running-the-pipeline)
 - [Environment Variables](#environment-variables)
-- [Monitoring and Maintenance](#monitoring-and-maintenance)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 This pipeline:
