@@ -10,7 +10,6 @@ This project implements a high-availability data pipeline for crawling data, per
 - [Prerequisites](#prerequisites)
 - [Setup Instructions](#setup-instructions)
 - [Running the Pipeline](#running-the-pipeline)
-- [Environment Variables](#environment-variables)
 
 ## Overview
 This pipeline:
